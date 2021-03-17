@@ -86,10 +86,14 @@ html_static_path = ['_static']
 
 # -- Options for breathe and exhale ------------------------------------------
 
-import subprocess, os
+import os
+import os.path
+import subprocess
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
+    if not os.path.exists('_build/doxygen'):
+        os.makedirs('_build/doxygen')
     subprocess.call('doxygen', shell=True)
 
 breathe_projects = {
