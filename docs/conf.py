@@ -90,11 +90,10 @@ import subprocess, os
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
-    os.makedirs('../build/doxygen')
     subprocess.call('doxygen', shell=True)
 
 breathe_projects = {
-    'rmf_traffic': '../build/doxygen/xml'
+    'rmf_traffic': '_build/doxygen/xml'
 }
 breathe_default_project = 'rmf_traffic'
 
@@ -105,7 +104,7 @@ exhale_args = {
     'doxygenStripFromPath': '../..',
     'createTreeView': True,
     'exhaleExecutesDoxygen': False,
-    'exhaleDoxygenStdin': 'INPUT = ../../rmf_traffic/include',
+    'exhaleDoxygenStdin': 'INPUT = ../rmf_traffic/include',
     'verboseBuild': True,
 }
 
