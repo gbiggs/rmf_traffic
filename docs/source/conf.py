@@ -90,7 +90,7 @@ import subprocess, os
 
 read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 if read_the_docs_build:
-    os.mkdir('../build/doxygen')
+    os.makedirs('../build/doxygen')
     subprocess.call('doxygen', shell=True)
 
 breathe_projects = {
