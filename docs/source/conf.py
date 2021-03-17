@@ -99,6 +99,7 @@ exhale_args = {
     'createTreeView': True,
     'exhaleExecutesDoxygen': True,
     'exhaleDoxygenStdin': 'INPUT = ../rmf_traffic/include',
+    'verboseBuild': True,
 }
 
 primary_domain = 'cpp'
