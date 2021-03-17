@@ -87,7 +87,7 @@ html_static_path = ['_static']
 # -- Options for breathe and exhale ------------------------------------------
 
 breathe_projects = {
-    'rmf_traffic': '../build/doxygen/xml'
+    'rmf_traffic': 'docs/build/doxygen/xml'
 }
 breathe_default_project = 'rmf_traffic'
 
@@ -98,7 +98,7 @@ exhale_args = {
     'doxygenStripFromPath': '../..',
     'createTreeView': True,
     'exhaleExecutesDoxygen': True,
-    'exhaleDoxygenStdin': 'INPUT = ../../rmf_traffic/include',
+    'exhaleDoxygenStdin': 'INPUT = ../rmf_traffic/include',
 }
 
 primary_domain = 'cpp'
