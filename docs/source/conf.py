@@ -93,7 +93,7 @@ if read_the_docs_build:
     subprocess.call('doxygen', shell=True)
 
 breathe_projects = {
-    'rmf_traffic': 'build/doxygen/xml'
+    'rmf_traffic': '../build/doxygen/xml'
 }
 breathe_default_project = 'rmf_traffic'
 
